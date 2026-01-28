@@ -26,6 +26,14 @@ final class AppModel {
         "Generating action plan...",
     ]
 
+    // AI Chat state
+    var showAIChatInput = false
+    var showAIChatProcessing = false
+    var showAIChatComplete = false
+    var aiChatUserMessage = ""
+    var aiChatResponse = ""
+    var isAIChatProcessing = false
+
     // Voice input state
     var isRecording = false
     var transcribedText: String = ""
@@ -234,6 +242,45 @@ final class AppModel {
         isProcessingAI = false
         showAIProcessing = false
         aiProcessingStep = 0
+    }
+
+    // MARK: - AI Chat Processing
+
+    func startAIChatProcessing(input: String) async {
+        aiChatUserMessage = input
+        isAIChatProcessing = true
+        showAIChatInput = false
+        showAIChatProcessing = true
+    }
+
+    func completeAIChatProcessing(response: String) {
+        aiChatResponse = response
+        isAIChatProcessing = false
+        showAIChatProcessing = false
+        showAIChatComplete = true
+    }
+
+    func cancelAIChatProcessing() {
+        isAIChatProcessing = false
+        showAIChatProcessing = false
+        aiChatUserMessage = ""
+    }
+
+    func dismissAIChat() {
+        showAIChatInput = false
+        showAIChatProcessing = false
+        showAIChatComplete = false
+        aiChatUserMessage = ""
+        aiChatResponse = ""
+        isAIChatProcessing = false
+    }
+
+    func regenerateAIChatResponse() async {
+        // Reset to processing state
+        showAIChatComplete = false
+        showAIChatProcessing = true
+        isAIChatProcessing = true
+        aiChatResponse = ""
     }
 
     // MARK: - Notifications
