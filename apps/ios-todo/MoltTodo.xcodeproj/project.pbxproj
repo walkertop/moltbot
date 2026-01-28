@@ -10,6 +10,7 @@
 		18F1C821E855C672D6DC20AF /* TodoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06996547ECB95ED182C437 /* TodoTask.swift */; };
 		20B50BDA05286FDD5A563E39 /* SubtasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488189BE57B6FB0330F79E /* SubtasksView.swift */; };
 		27CE2E2F89052D5F0CA1E036 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB388EBA36B2E7CACAFBD42 /* NotificationService.swift */; };
+		3DAD0E22E350B35AED76862A /* AIChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09E29DC01D36773D01F3502 /* AIChatInputView.swift */; };
 		605C0FCDC3B9521770464491 /* AIProcessingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C428426A2D6DDC11265ED35 /* AIProcessingView.swift */; };
 		7396ABC698BEE37374C9F883 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020D839971959AB5B21B5842 /* PushNotificationService.swift */; };
 		7A27303B122DBAC7D522D61E /* PersistentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E48855242553051EE1410D /* PersistentTask.swift */; };
@@ -21,10 +22,12 @@
 		CF81A25121381545ACB25CA9 /* MoltTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846A1C7EF597CE3367C70FD /* MoltTodoApp.swift */; };
 		D216397CC31D83A7B0F19A8D /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A110A36FEDA9CD7DEC1C0 /* TaskListView.swift */; };
 		D674F604F14EF040A015FFBA /* VoiceInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6812A30986B2A05A131FCF07 /* VoiceInputView.swift */; };
+		DA243D3B1D9BD7CB7BB80409 /* AIChatCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B2D34B364DA2E02A46C1E1 /* AIChatCompleteView.swift */; };
 		DE5FFB66D750CF844B67FE8E /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD7BF7A91FECC21077B303 /* DataStore.swift */; };
 		E277EE8F790FEB8792F1FD71 /* TodoTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E802AFCB4B65FE28E00D8D1 /* TodoTaskTests.swift */; };
 		F4964E531AA3FF9517CAB09E /* TaskCreatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF08009623A60520CE6A114 /* TaskCreatedView.swift */; };
 		F4CDF3665D933D0157D60042 /* TodoTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F8334422585CD2B68881A7 /* TodoTheme.swift */; };
+		FEDC880E42DCF423EDDDD9A3 /* AIChatProcessingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC45A2D84E3CF0B0969CB612 /* AIChatProcessingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,13 +57,16 @@
 		62F82A010A2B9CD13BCB0539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6812A30986B2A05A131FCF07 /* VoiceInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceInputView.swift; sourceTree = "<group>"; };
 		8BB388EBA36B2E7CACAFBD42 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		90B2D34B364DA2E02A46C1E1 /* AIChatCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatCompleteView.swift; sourceTree = "<group>"; };
 		9C428426A2D6DDC11265ED35 /* AIProcessingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProcessingView.swift; sourceTree = "<group>"; };
 		9F24C50110771F9756EBFF8D /* MoltTodo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MoltTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFBD7BF7A91FECC21077B303 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		C4059C7A2B3AD79E8E547138 /* TaskCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCardView.swift; sourceTree = "<group>"; };
 		C73CEC1CF1F3C42E6120DF19 /* MoltTodoTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MoltTodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC45A2D84E3CF0B0969CB612 /* AIChatProcessingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatProcessingView.swift; sourceTree = "<group>"; };
 		CEF995BF559AB48616908BF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D4E48855242553051EE1410D /* PersistentTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentTask.swift; sourceTree = "<group>"; };
+		F09E29DC01D36773D01F3502 /* AIChatInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -95,6 +101,16 @@
 				C73CEC1CF1F3C42E6120DF19 /* MoltTodoTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		40FE3E295D3807D050725197 /* AIChat */ = {
+			isa = PBXGroup;
+			children = (
+				90B2D34B364DA2E02A46C1E1 /* AIChatCompleteView.swift */,
+				F09E29DC01D36773D01F3502 /* AIChatInputView.swift */,
+				CC45A2D84E3CF0B0969CB612 /* AIChatProcessingView.swift */,
+			);
+			path = AIChat;
 			sourceTree = "<group>";
 		};
 		57F433ED5F9F6EA02F401A63 /* Main */ = {
@@ -151,6 +167,7 @@
 		C7937B81021046F50C1DC903 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				40FE3E295D3807D050725197 /* AIChat */,
 				77CB9C98670D3708A5E4A845 /* AIProcessing */,
 				F91509401BACD3EBCCC26D0E /* Components */,
 				57F433ED5F9F6EA02F401A63 /* Main */,
@@ -283,6 +300,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA243D3B1D9BD7CB7BB80409 /* AIChatCompleteView.swift in Sources */,
+				3DAD0E22E350B35AED76862A /* AIChatInputView.swift in Sources */,
+				FEDC880E42DCF423EDDDD9A3 /* AIChatProcessingView.swift in Sources */,
 				C06F9A64AB4097F7D7CD7D71 /* AICreateView.swift in Sources */,
 				605C0FCDC3B9521770464491 /* AIProcessingView.swift in Sources */,
 				B1A41460F218DFE34687960B /* AppDelegate.swift in Sources */,

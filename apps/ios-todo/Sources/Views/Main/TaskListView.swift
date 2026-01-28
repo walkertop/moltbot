@@ -51,16 +51,35 @@ struct TaskListView: View {
     // MARK: - Header
 
     private var headerSection: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text("My Tasks")
-                .font(.system(size: 34, weight: .bold))
-                .foregroundStyle(TodoTheme.textPrimary)
+        HStack {
+            VStack(alignment: .leading, spacing: 4) {
+                Text("My Tasks")
+                    .font(.system(size: 34, weight: .bold))
+                    .foregroundStyle(TodoTheme.textPrimary)
 
-            Text(Date(), format: .dateTime.weekday(.wide).month().day())
-                .font(.system(size: 17))
-                .foregroundStyle(TodoTheme.textTertiary)
+                Text(Date(), format: .dateTime.weekday(.wide).month().day())
+                    .font(.system(size: 17))
+                    .foregroundStyle(TodoTheme.textTertiary)
+            }
+
+            Spacer()
+
+            // AI Chat button
+            Button {
+                appModel.showAIChatInput = true
+            } label: {
+                ZStack {
+                    Circle()
+                        .fill(TodoTheme.accentGradient)
+                        .frame(width: 44, height: 44)
+                        .shadow(color: TodoTheme.accentPurple.opacity(0.4), radius: 12, y: 4)
+
+                    Image(systemName: "sparkles")
+                        .font(.system(size: 20))
+                        .foregroundStyle(.white)
+                }
+            }
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal, 24)
         .padding(.vertical, 16)
     }
@@ -73,9 +92,7 @@ struct TaskListView: View {
                 ForEach(appModel.tasks) { task in
                     TaskCardView(task: task)
                         .onTapGesture {
-                            if !task.subtasks.isEmpty {
-                                appModel.navigationPath.append(.subtasks(task))
-                            }
+                            appModel.navigationPath.append(.subtasks(task))
                         }
                 }
             }
