@@ -1,0 +1,82 @@
+name: MoltTodo
+options:
+  bundleIdPrefix: bot.molt
+  deploymentTarget:
+    iOS: "18.0"
+  xcodeVersion: "16.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+
+schemes:
+  MoltTodo:
+    shared: true
+    build:
+      targets:
+        MoltTodo: all
+    test:
+      targets:
+        - MoltTodoTests
+
+targets:
+  MoltTodo:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    dependencies: []
+    settings:
+      base:
+        CODE_SIGN_IDENTITY: "Apple Development"
+        CODE_SIGN_STYLE: Manual
+        DEVELOPMENT_TEAM: Y5PE65HELJ
+        PRODUCT_BUNDLE_IDENTIFIER: bot.molt.todo
+        PROVISIONING_PROFILE_SPECIFIER: ""
+        SWIFT_VERSION: "6.0"
+        SWIFT_STRICT_CONCURRENCY: complete
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleDisplayName: Molt Todo
+        CFBundleIconName: AppIcon
+        CFBundleShortVersionString: "1.0.0"
+        CFBundleVersion: "1"
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UIBackgroundModes:
+          - audio
+        NSLocalNetworkUsageDescription: Molt Todo connects to Moltbot gateway for AI task processing.
+        NSBonjourServices:
+          - _moltbot-gw._tcp
+        NSMicrophoneUsageDescription: Molt Todo needs microphone access for voice input.
+        NSSpeechRecognitionUsageDescription: Molt Todo uses on-device speech recognition for voice task input.
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+
+  MoltTodoTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: MoltTodo
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: bot.molt.todo.tests
+        SWIFT_VERSION: "6.0"
+        SWIFT_STRICT_CONCURRENCY: complete
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/MoltTodo.app/MoltTodo"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+    info:
+      path: Tests/Info.plist
+      properties:
+        CFBundleDisplayName: MoltTodoTests
+        CFBundleShortVersionString: "1.0.0"
+        CFBundleVersion: "1"
