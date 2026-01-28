@@ -11,13 +11,17 @@
 		20B50BDA05286FDD5A563E39 /* SubtasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488189BE57B6FB0330F79E /* SubtasksView.swift */; };
 		27CE2E2F89052D5F0CA1E036 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB388EBA36B2E7CACAFBD42 /* NotificationService.swift */; };
 		605C0FCDC3B9521770464491 /* AIProcessingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C428426A2D6DDC11265ED35 /* AIProcessingView.swift */; };
+		7396ABC698BEE37374C9F883 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020D839971959AB5B21B5842 /* PushNotificationService.swift */; };
+		7A27303B122DBAC7D522D61E /* PersistentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E48855242553051EE1410D /* PersistentTask.swift */; };
 		7E0D9796D979EEC276CA7160 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1053A974EF12931CBC7986 /* AppModel.swift */; };
 		85F8EBC8FB16812E3EE77466 /* TaskCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4059C7A2B3AD79E8E547138 /* TaskCardView.swift */; };
 		96A33E717D583624C4CCE4B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E2678557AD1D07FB6EFF55 /* ContentView.swift */; };
+		B1A41460F218DFE34687960B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F82A010A2B9CD13BCB0539 /* AppDelegate.swift */; };
 		C06F9A64AB4097F7D7CD7D71 /* AICreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD29EE56CF517E78068BE29 /* AICreateView.swift */; };
 		CF81A25121381545ACB25CA9 /* MoltTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846A1C7EF597CE3367C70FD /* MoltTodoApp.swift */; };
 		D216397CC31D83A7B0F19A8D /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A110A36FEDA9CD7DEC1C0 /* TaskListView.swift */; };
 		D674F604F14EF040A015FFBA /* VoiceInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6812A30986B2A05A131FCF07 /* VoiceInputView.swift */; };
+		DE5FFB66D750CF844B67FE8E /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD7BF7A91FECC21077B303 /* DataStore.swift */; };
 		E277EE8F790FEB8792F1FD71 /* TodoTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E802AFCB4B65FE28E00D8D1 /* TodoTaskTests.swift */; };
 		F4964E531AA3FF9517CAB09E /* TaskCreatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF08009623A60520CE6A114 /* TaskCreatedView.swift */; };
 		F4CDF3665D933D0157D60042 /* TodoTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F8334422585CD2B68881A7 /* TodoTheme.swift */; };
@@ -34,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020D839971959AB5B21B5842 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
 		03E2678557AD1D07FB6EFF55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1846A1C7EF597CE3367C70FD /* MoltTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoltTodoApp.swift; sourceTree = "<group>"; };
 		1C06996547ECB95ED182C437 /* TodoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTask.swift; sourceTree = "<group>"; };
 		1E802AFCB4B65FE28E00D8D1 /* TodoTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTaskTests.swift; sourceTree = "<group>"; };
+		23EA87BF8D9F464B0347902F /* MoltTodo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoltTodo.entitlements; sourceTree = "<group>"; };
 		25FE1F8EB4541B4FE9BB6EAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2E1053A974EF12931CBC7986 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		39F8334422585CD2B68881A7 /* TodoTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTheme.swift; sourceTree = "<group>"; };
@@ -45,21 +51,26 @@
 		4AD29EE56CF517E78068BE29 /* AICreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICreateView.swift; sourceTree = "<group>"; };
 		546A110A36FEDA9CD7DEC1C0 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		5CF08009623A60520CE6A114 /* TaskCreatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCreatedView.swift; sourceTree = "<group>"; };
+		62F82A010A2B9CD13BCB0539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6812A30986B2A05A131FCF07 /* VoiceInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceInputView.swift; sourceTree = "<group>"; };
 		8BB388EBA36B2E7CACAFBD42 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		9C428426A2D6DDC11265ED35 /* AIProcessingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProcessingView.swift; sourceTree = "<group>"; };
 		9F24C50110771F9756EBFF8D /* MoltTodo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MoltTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFBD7BF7A91FECC21077B303 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		C4059C7A2B3AD79E8E547138 /* TaskCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCardView.swift; sourceTree = "<group>"; };
 		C73CEC1CF1F3C42E6120DF19 /* MoltTodoTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MoltTodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF995BF559AB48616908BF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D4E48855242553051EE1410D /* PersistentTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		090F98F80702E57BBC0E7873 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				62F82A010A2B9CD13BCB0539 /* AppDelegate.swift */,
 				03E2678557AD1D07FB6EFF55 /* ContentView.swift */,
 				CEF995BF559AB48616908BF1 /* Info.plist */,
+				23EA87BF8D9F464B0347902F /* MoltTodo.entitlements */,
 				1846A1C7EF597CE3367C70FD /* MoltTodoApp.swift */,
 				BA7A4BBC1E7D7A81E9122824 /* Model */,
 				E38ACEC69FAFE5D2FF77D9CD /* Services */,
@@ -123,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				2E1053A974EF12931CBC7986 /* AppModel.swift */,
+				D4E48855242553051EE1410D /* PersistentTask.swift */,
 				1C06996547ECB95ED182C437 /* TodoTask.swift */,
 			);
 			path = Model;
@@ -161,7 +173,9 @@
 		E38ACEC69FAFE5D2FF77D9CD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BFBD7BF7A91FECC21077B303 /* DataStore.swift */,
 				8BB388EBA36B2E7CACAFBD42 /* NotificationService.swift */,
+				020D839971959AB5B21B5842 /* PushNotificationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -271,10 +285,14 @@
 			files = (
 				C06F9A64AB4097F7D7CD7D71 /* AICreateView.swift in Sources */,
 				605C0FCDC3B9521770464491 /* AIProcessingView.swift in Sources */,
+				B1A41460F218DFE34687960B /* AppDelegate.swift in Sources */,
 				7E0D9796D979EEC276CA7160 /* AppModel.swift in Sources */,
 				96A33E717D583624C4CCE4B6 /* ContentView.swift in Sources */,
+				DE5FFB66D750CF844B67FE8E /* DataStore.swift in Sources */,
 				CF81A25121381545ACB25CA9 /* MoltTodoApp.swift in Sources */,
 				27CE2E2F89052D5F0CA1E036 /* NotificationService.swift in Sources */,
+				7A27303B122DBAC7D522D61E /* PersistentTask.swift in Sources */,
+				7396ABC698BEE37374C9F883 /* PushNotificationService.swift in Sources */,
 				20B50BDA05286FDD5A563E39 /* SubtasksView.swift in Sources */,
 				85F8EBC8FB16812E3EE77466 /* TaskCardView.swift in Sources */,
 				F4964E531AA3FF9517CAB09E /* TaskCreatedView.swift in Sources */,
@@ -363,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/MoltTodo.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Y5PE65HELJ;
@@ -384,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/MoltTodo.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Y5PE65HELJ;

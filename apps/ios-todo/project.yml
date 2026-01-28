@@ -26,6 +26,10 @@ targets:
     sources:
       - path: Sources
     dependencies: []
+    entitlements:
+      path: Sources/MoltTodo.entitlements
+      properties:
+        aps-environment: development
     settings:
       base:
         CODE_SIGN_IDENTITY: "Apple Development"
@@ -47,6 +51,7 @@ targets:
           UIApplicationSupportsMultipleScenes: false
         UIBackgroundModes:
           - audio
+          - remote-notification
         NSLocalNetworkUsageDescription: Molt Todo connects to Moltbot gateway for AI task processing.
         NSBonjourServices:
           - _moltbot-gw._tcp
