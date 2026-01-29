@@ -64,6 +64,15 @@ targets:
           - UIInterfaceOrientationPortraitUpsideDown
           - UIInterfaceOrientationLandscapeLeft
           - UIInterfaceOrientationLandscapeRight
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+          NSAllowsArbitraryLoadsInWebContent: true
+          NSAllowsLocalNetworking: true
+          NSExceptionDomains:
+            30.19.134.14:
+              NSExceptionAllowsInsecureHTTPLoads: true
+              NSIncludesSubdomains: true
+              NSTemporaryExceptionAllowsInsecureHTTPLoads: true
 
   MoltTodoTests:
     type: bundle.unit-test

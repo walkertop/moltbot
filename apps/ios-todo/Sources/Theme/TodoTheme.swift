@@ -28,6 +28,10 @@ enum TodoTheme {
     static let cardBorder = Color.white.opacity(0.15)
     static let cardBorderLight = Color.white.opacity(0.2)
 
+    // Background colors
+    static let backgroundPrimary = Color(hex: "#1a1a2e")
+    static let backgroundSecondary = Color(hex: "#16213e")
+
     // Completed task style
     static let completedBackground = Color(hex: "#22C55E").opacity(0.15)
     static let completedBorder = Color(hex: "#22C55E").opacity(0.3)

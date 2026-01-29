@@ -64,6 +64,21 @@ struct TaskListView: View {
 
             Spacer()
 
+            // Terminal button
+            Button {
+                appModel.showTerminal = true
+            } label: {
+                ZStack {
+                    Circle()
+                        .fill(Color.white.opacity(0.1))
+                        .frame(width: 44, height: 44)
+
+                    Image(systemName: "terminal")
+                        .font(.system(size: 18))
+                        .foregroundStyle(TodoTheme.textSecondary)
+                }
+            }
+
             // AI Chat button
             Button {
                 appModel.showAIChatInput = true

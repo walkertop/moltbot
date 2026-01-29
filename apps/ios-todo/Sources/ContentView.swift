@@ -33,6 +33,10 @@ struct ContentView: View {
                 aiResponse: appModel.aiChatResponse
             )
         }
+        // Terminal sheet
+        .fullScreenCover(isPresented: $model.showTerminal) {
+            TerminalView()
+        }
     }
 }
 
