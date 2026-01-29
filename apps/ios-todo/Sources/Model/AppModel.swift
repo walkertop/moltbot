@@ -34,6 +34,9 @@ final class AppModel {
     var aiChatResponse = ""
     var isAIChatProcessing = false
 
+    // Terminal state
+    var showTerminal = false
+
     // Voice input state
     var isRecording = false
     var transcribedText: String = ""
